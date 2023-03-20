@@ -1,0 +1,62 @@
+/* Reset CSS styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Website Style ----------------------------------------------- */
+
+/* General layout */
+.gap-x-3 {
+  grid-gap: 0 1rem !important;
+}
+
+.gap-x-5 {
+  grid-gap: 0 3rem !important;
+}
+
+.bg-opacity-90 {
+  --bs-bg-opacity: 0.90;
+}
+
+/* DOM elements */
+html, body {
+	min-width: 375px !important;
+}
+
+.body-container {
+	min-height: 100vh;
+	display:flex;
+	flex-direction: column;
+}
+
+.main-container {
+	display: flex;
+	flex-grow: 1;
+}
+
+.website-logo {
+  height: 40px;
+}
+
+/* Main Navigation */
+
+a.nav-link:hover:not(.active) {
+	text-decoration: underline;
+}
+
+/* Page switcher in header */
+.page-switcher-nav {
+  background-color: lightslategrey;
+	height: 10vh;
+	min-height: 50px !important;
+}
+
+.page-switcher-nav nav {
+	width: 90%;
+}
+
+.page-switcher-nav #page-switcher-nav-title {
+	font-size: 2rem;
+}

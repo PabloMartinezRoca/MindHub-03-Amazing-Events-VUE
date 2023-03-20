@@ -1,0 +1,44 @@
+/* Contact Us secton */
+.contact-form {
+	padding: 0 1em;
+	background-image: url('../images/information-manipulation.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+
+.contact-form textarea {
+	min-height: 200px !important;
+	resize: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+	opacity: 0.95;
+}
+
+.contact-form .submit-information {
+	color: #66a;
+	padding: 0.2em 1em !important;
+	background-color: rgb(255, 255, 255, 0.8);
+	border: 1px solid #eee;
+	border-radius: 5px;
+}
+
+.contact-form .form-opacity {
+	padding: 0.2em 1em !important;
+	background-color: rgb(255, 255, 255, 0.95);
+	border: 1px solid #eee;
+	border-radius: 5px;
+}
+
+#contactFormSentModal figure {
+	text-align:center;
+	margin: 0 !important;
+}
+
+#contactFormSentModal figure img {
+	max-width:100%;
+	max-height: 250px;
+}

@@ -1,0 +1,94 @@
+/* Filter list */
+.search-bar .navbar {
+  width: 100%;
+}
+
+.search-bar .filter-bar-item {
+  background-color: #fff;
+  margin: 0.4rem;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+}
+
+.search-bar .search-bar-container {
+  width: 60%;
+  max-width: 600px;
+}
+
+/* List of events section */
+.event-card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.event-card-container .event-card {
+  width: 300px;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.event-card-container .event-card .card-header {
+	font-weight: bold;
+	color: #6633ff;
+}
+
+.event-card-container .event-card .card-image-container {
+	display: flex;
+  height: 250px;
+}
+
+.event-card-container .event-card .card-image-container > img {
+  width: 100%;
+}
+
+.event-card-container .event-card .event-title {
+  margin-top: -2em !important;
+  height: 2em !important;
+  line-height: 2em;
+  color: #cc0066;
+	border-bottom: dotted 1px #666;
+	border-radius: 5px 5px 0 0;
+}
+
+.event-card-container .event-card .event-category {
+	background-color: #cc0066;
+	color: #fff;
+	padding: 0.5em;
+
+}
+
+.event-card-container .event-card .event-category .text-muted {
+	color: inherit !important;
+}
+
+.event-description {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 0.9rem;
+}
+
+.event-card-container .event-card .event-price {
+	color: #6633ff;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.event-card-container .event-card .event-premiere {
+	font-size: 0.7rem;
+	text-align: center;
+	margin: 0.5em 0;
+}
+
+.event-card-container .no-event-card {
+	display: none;
+}
+
+/* Buttons */
+.btn-outline-amazing {
+  border-color: #cc0066;
+}
+.btn-outline-amazing:hover {
+  color: #cc0066;
+	border-color: #cc0066;
+	background-color: #ffccff;
+}

@@ -1,0 +1,60 @@
+/* Stats section */
+.stats h2 {
+	background-color:deeppink;
+	padding: 0.3em 0.5em;
+	color: #fff;
+	font-size: 1.2rem;
+	margin-top: 1rem;
+}
+
+.stats #events-statistics-container, 
+.stats #upcoming-events-statistics-by-category-container,
+.stats #past-events-statistics-by-category-container {
+	width: 100%;
+}
+
+.stats table {
+	font-size: 1rem;
+	border-collapse: separate;
+  border-spacing: 1rem 0;
+	width: 100%;
+}
+
+.stats table th {
+	border-bottom: 1px solid;
+	border-color: dodgerblue;
+	padding-right: 1rem;
+}
+
+.stats table td {
+	border-bottom: 1px dotted;
+	border-color: dodgerblue;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.4rem;
+	background-color:aliceblue;
+}
+
+.stats table tr:last-child td {
+	border-style: double !important;
+}
+
+.stats table .event-name {
+	font-weight: bold;
+	color: darkred;
+
+}
+
+.stats table .event-people {
+	font-size: 0.9rem;
+}
+
+.show {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+	20% { opacity: 0; }
+  100% { opacity: 1; }
+}

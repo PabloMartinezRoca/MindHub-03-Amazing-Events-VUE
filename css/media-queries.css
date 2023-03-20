@@ -1,0 +1,10 @@
+/* Breakpoint Small */
+@media (min-width: 576px) {
+	.flex-sm-grow-2 {
+    flex-grow: 2 !important;
+  }
+
+	.flex-sm-nowrap {
+  flex-wrap: nowrap !important;
+}
+}
