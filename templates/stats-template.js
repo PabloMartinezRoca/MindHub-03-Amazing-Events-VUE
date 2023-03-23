@@ -1,6 +1,6 @@
 // Template for events stats
-function defineEventsStatisticsTable (stats) {
-	return `
+function defineEventsStatisticsTable(stats) {
+  return `
 		<table>
 			<thead>
 				<tr>
@@ -11,17 +11,35 @@ function defineEventsStatisticsTable (stats) {
 			</thead>
 			<tbody>
 				<tr>
-					<td><div class="d-flex flex-column flex-wrap"><span class="event-name">${stats.highestAttendanceEvent.name}</span><span class="event-people">${stats.highestAttendanceEvent.assistance.toLocaleString("es-AR")} people</span></div></td>
-					<td><div class="d-flex flex-column"><span class="event-name">${stats.lowestAttendanceEvent.name}</span><span class="event-people">${stats.lowestAttendanceEvent.assistance.toLocaleString("es-AR")} people</span></div></td>
-					<td><div class="d-flex flex-column"><span class="event-name">${stats.largerCapacityEvent.name}</span><span class="event-people">${stats.largerCapacityEvent.capacity.toLocaleString("es-AR")} people</span></div></td>
+					<td>
+						<div class="d-flex flex-column flex-wrap">
+							<span class="event-name">${stats.highestPctAttendanceEvent.name}</span>
+							<span class="event-people">${stats.highestPctAttendanceEvent.assistance.toLocaleString("en-US")} people </span>
+							<span> ${stats.highestPctAttendanceEvent.pctAttendance} %</span>
+						</div>
+					</td>
+					<td>
+						<div class="d-flex flex-column">
+							<span class="event-name">${stats.lowestPctAttendanceEvent.name}</span>
+							<span class="event-people">${stats.lowestPctAttendanceEvent.assistance.toLocaleString("en-US")} people </span>
+							<span> ${stats.lowestPctAttendanceEvent.pctAttendance} %</span>
+						</div>
+					</td>
+					<td>
+						<div class="d-flex flex-column">
+							<span class="event-name">${stats.largerCapacityEvent.name}</span>
+							<span class="event-people">${stats.largerCapacityEvent.capacity.toLocaleString("en-US")} people</span>
+							<span>&nbsp;</span>
+						</div>
+					</td>
 				</tr>
 			</tbody>
 		</table>
-	`
+	`;
 }
 
-function defineEventsStatsByCategory (stats) {
-	let template = `
+function defineEventsStatsByCategory(stats) {
+  let template = `
 		<table>
 			<thead>
 				<tr>
@@ -31,25 +49,21 @@ function defineEventsStatsByCategory (stats) {
 				</tr>
 			</thead>
 			<tbody>
-		`
+		`;
 
-	for (let categoryData of stats) {
-
-		let revenue = categoryData.data.reduce((accumulator, data) => accumulator + Number(data.assistance) * Number(data.price), 0)
-		let attendancePct = categoryData.data.reduce((accumulator, data) => accumulator + Number(data.assistance), 0) / categoryData.data.reduce((accumulator, data) => accumulator + Number(data.capacity), 0) * 100
-			
-		template += `
+  for (let categoryData of stats) {
+    template += `
 				<tr>
 					<td>${categoryData.category}</td>
-					<td>$ ${revenue.toLocaleString("es-AR")}</td>  
-					<td>${attendancePct.toFixed(2)} %</td>
+					<td>$ ${categoryData.revenue.toLocaleString("en-US")}</td>  
+					<td>${categoryData.attendancePct} %</td>
 				</tr>
-		`
-	}
+		`;
+  }
 
-		template += `
+  template += `
 			</tbody>
 		</table>
-		`
-	return template
+		`;
+  return template;
 }

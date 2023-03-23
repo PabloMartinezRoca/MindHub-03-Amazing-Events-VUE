@@ -15,7 +15,7 @@ const app = createApp({
 	created() {
 		/* NOT IMPLEMENTED YET
 		// Insert Card objects in DOM
-		this.eventsCardsContainer = document.getElementById("event-card-container")
+		this.eventsCardsContainer = document.getElementById("event-card-container") 
 		
 		this.insertCardsInDOM(this.eventsCardsContainer);
 		*/
@@ -31,8 +31,11 @@ const app = createApp({
 				// Get the list of categories
 				this.categoriesForEventsList = this.getCategoriesList(this.eventsList)
 
-				// Functions
+				// Activate events parent display area and hide the preloader
+				document.getElementById("interfase-container").classList.remove("d-none")
+				document.getElementById("loading-container").classList.add("d-none")
 
+				// Functions
 				function showNoEvents() {
 					eventsCardsContainer.innerHTML += defineNoEventCard();
 				}
