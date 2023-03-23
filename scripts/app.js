@@ -35,10 +35,6 @@ const app = createApp({
 				document.getElementById("interfase-container").classList.remove("d-none")
 				document.getElementById("loading-container").classList.add("d-none")
 
-				// Functions
-				function showNoEvents() {
-					eventsCardsContainer.innerHTML += defineNoEventCard();
-				}
 			})
 			.catch((error) => console.log(error));
 
